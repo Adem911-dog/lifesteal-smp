@@ -6,113 +6,220 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
 <style>
+
 *{margin:0;padding:0;box-sizing:border-box}
 
 body{
-    background:#0b0b0b;
-    color:white;
-    font-family:Arial,sans-serif;
-    min-height:100vh;
-    display:flex;
-    justify-content:center;
-    align-items:center;
+background:#0a0a0a;
+color:white;
+font-family:Arial, sans-serif;
+text-align:center;
 }
 
-.container{
-    text-align:center;
-    max-width:420px;
-    animation:fade 1.2s ease;
+/* HEADER */
+
+header{
+padding:40px 20px;
 }
 
 h1{
-    font-size:2.6rem;
-    margin-bottom:15px;
+font-size:3rem;
+margin-bottom:10px;
 }
 
-img{
-    width:300px;
-    max-width:90%;
-    border-radius:8px;
-    box-shadow:0 0 25px rgba(255,0,0,.4);
-    margin-bottom:15px;
+.subtitle{
+opacity:0.8;
+margin-bottom:20px;
 }
+
+/* IMAGE */
+
+.server-img{
+width:320px;
+max-width:90%;
+border-radius:10px;
+box-shadow:0 0 30px rgba(255,0,0,0.5);
+margin-bottom:20px;
+}
+
+/* IP BOX */
 
 .ip{
-    border:1px solid #ff2d2d;
-    padding:12px;
-    border-radius:6px;
-    margin-bottom:10px;
-    user-select:all;
+border:2px solid #ff3a3a;
+display:inline-block;
+padding:14px 20px;
+border-radius:8px;
+margin-bottom:20px;
+font-size:18px;
+user-select:all;
 }
 
-.version{
-    opacity:.8;
-    margin-bottom:15px;
+/* BUTTONS */
+
+.buttons a{
+display:block;
+width:260px;
+margin:10px auto;
+padding:12px;
+text-decoration:none;
+color:white;
+border-radius:6px;
+transition:0.3s;
 }
 
-a{
-    display:block;
-    padding:12px;
-    border-radius:6px;
-    text-decoration:none;
-    color:white;
-    border:1px solid #5865F2;
-    margin-bottom:10px;
+.discord{
+background:#5865F2;
 }
 
-a:hover{background:#5865F2}
+.discord:hover{
+background:#4752c4;
+}
 
-/* SECTIONS CSS ONLY */
+.copy{
+border:1px solid #ff3a3a;
+}
+
+.copy:hover{
+background:#ff3a3a;
+}
+
+/* SECTIONS */
+
+section{
+padding:40px 20px;
+max-width:700px;
+margin:auto;
+}
+
+section h2{
+margin-bottom:15px;
+}
+
+/* RULES */
+
+.rules{
+text-align:left;
+background:#111;
+padding:20px;
+border-radius:8px;
+}
+
+/* FAQ */
+
 details{
-    margin-top:10px;
-    border:1px solid #333;
-    border-radius:6px;
-    padding:10px;
-    text-align:left;
+margin-top:10px;
+background:#111;
+padding:10px;
+border-radius:6px;
+text-align:left;
 }
 
 summary{
-    cursor:pointer;
-    font-weight:bold;
+cursor:pointer;
+font-weight:bold;
 }
 
-@keyframes fade{
-    from{opacity:0;transform:translateY(20px)}
-    to{opacity:1;transform:none}
+/* FOOTER */
+
+footer{
+margin-top:50px;
+padding:20px;
+opacity:0.6;
+font-size:14px;
 }
+
+/* ANIMATION */
+
+@keyframes glow{
+0%{box-shadow:0 0 10px red;}
+50%{box-shadow:0 0 25px red;}
+100%{box-shadow:0 0 10px red;}
+}
+
+.server-img{
+animation:glow 3s infinite;
+}
+
 </style>
 </head>
 
 <body>
 
-<div class="container">
-    <h1>LifeSteal SMP</h1>
+<header>
 
-    <img src="https://i.imgur.com/skCbBo5.png" alt="LifeSteal SMP">
+<h1>LifeSteal SMP</h1>
+<p class="subtitle">Serveur Minecraft LifeSteal</p>
 
-    <div class="ip">
-        IP : <strong>lifestealsmp-LW4n.aternos.me</strong>
-    </div>
+<img class="server-img" src="https://i.imgur.com/skCbBo5.png">
 
-    <div class="version">
-        Java Edition — 1.21.5+
-    </div>
+<div class="ip">
+IP : <strong>lifestealsmp-LW4n.aternos.me</strong>
+</div>
 
-    <a href="https://discord.gg/dgs55uVAxb" target="_blank">
-        Rejoindre le Discord
-    </a>
+<div class="buttons">
 
-    <details>
-        <summary>📜 Règles</summary>
-        <p>• Pas de cheat<br>• Respect obligatoire<br>• PVP autorisé</p>
-    </details>
+<a class="copy">Clique puis CTRL+C pour copier l'IP</a>
 
-    <details>
-        <summary>ℹ️ Infos serveur</summary>
-        <p>• Mode LifeSteal<br>• Hardcore<br>• Communautaire</p>
-    </details>
+<a class="discord" href="https://discord.gg/dgs55uVAxb" target="_blank">
+Rejoindre le Discord
+</a>
 
 </div>
+
+<p>Version : Java 1.21.5+</p>
+
+</header>
+
+<section>
+
+<h2>Informations</h2>
+
+<p>
+Mode LifeSteal : quand tu tues un joueur tu gagnes un cœur,
+quand tu meurs tu en perds un.
+</p>
+
+</section>
+
+<section>
+
+<h2>Règles du serveur</h2>
+
+<div class="rules">
+<p>• Pas de cheat</p>
+<p>• Respect des joueurs</p>
+<p>• Pas de spam</p>
+<p>• PVP autorisé</p>
+</div>
+
+</section>
+
+<section>
+
+<h2>FAQ</h2>
+
+<details>
+<summary>Comment rejoindre ?</summary>
+<p>Ajoute l'IP du serveur dans Minecraft Java.</p>
+</details>
+
+<details>
+<summary>Version Minecraft ?</summary>
+<p>Java Edition 1.21.5+</p>
+</details>
+
+<details>
+<summary>Serveur gratuit ?</summary>
+<p>Oui, hébergé sur Aternos.</p>
+</details>
+
+</section>
+
+<footer>
+
+<p>LifeSteal SMP • Minecraft Server</p>
+
+</footer>
 
 </body>
 </html>
